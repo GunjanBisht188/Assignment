@@ -1,0 +1,39 @@
+h1{
+    color:rgb(53, 18, 18);
+    text-align: center;
+    font-size:30px;
+    font-weight: bolder;
+    text-decoration-line: underline;
+    text-decoration-color: greenyellow;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3px;
+    text-decoration: dotted line-through whitesmoke 10px;
+    text-transform: uppercase;
+    text-shadow: 10px 20px 30px grey;
+    
+}
+p{
+    text-align: justify;
+    font-size: 30px;
+    text-align-last: center;
+
+    text-indent: 80px;
+    line-height: 2;
+    letter-spacing: -1;
+    word-spacing: 2;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+   
+    font-variant: small-caps;
+    background-color:  rgba(211, 228, 227,.5);
+}
+body{
+background-color:  darkgreen; 
+background-image: linear-gradient(to right bottom, rgba(244, 0, 0,.5),blue) ,url('books.jpeg');
+background-size: cover;
+background-repeat:no-repeat;
+background-position: center;
+}
+.highlight{
+background-color: rgba(125, 138, 14);
+}

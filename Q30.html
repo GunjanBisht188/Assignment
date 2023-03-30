@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Number Guessing Game</title>
+
+    <style>
+        body{
+            background-color: bisque;
+        }
+        h1{
+    text-decoration: underline;
+      color: rgb(13, 23, 31);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        }
+        #b{
+            display: flex;
+      justify-content: center;
+      align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+    <h1>Number Guessing Game</h1>
+    </div>
+    <div id="b">
+    <button type="button" onclick="runGame()">Start Game</button>
+    </div>
+    <script>
+function runGame() {
+
+let guessString = '';
+let guessNumber = 0;
+let correct = false;
+let numTries = 0;
+
+const randomNumber = Math.random() * 1000;
+const randomInteger = Math.floor(randomNumber);
+const target = randomInteger + 1;
+
+do {
+    guessString = prompt(
+        'I am thinking of a number in the range 1 to 1000.\n\nWhat is the number?'
+    )
+    guessNumber = +guessString;
+    numTries += 1; 
+    correct = checkGuess(guessNumber, target);
+} while (!correct);
+
+alert(
+    'You got it! The number was ' + target + '.\n\nIt took you ' + numTries + ' tries to guess correctly.'
+);
+}
+
+function checkGuess(guessNumber, target) {
+let correct = false;
+
+if (isNaN(guessNumber)) {
+    alert(
+        'You have not entered a number.\n\nPlease enter a number in the 1-1000 range'
+    );
+} else if ((guessNumber < 1) || (guessNumber > 1000)) {
+    alert('Please enter an integer in the 1-1000 range.');
+} else if (guessNumber > target) {
+    alert('You number is too large!');
+} else if (guessNumber < target) {
+    alert('Your number is too small!');
+} else {
+    correct = true;
+}
+return correct;
+}
+    
+    </script>
+</body>
+</html>

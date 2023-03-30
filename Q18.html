@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Css2</title>
+        <style>
+            .container{
+    border: solid red 2px;
+    height: 800px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(37, 28, 28);
+    justify-content: space-evenly;
+   
+}
+.container > div{
+                border: solid red 2px;
+                height: 200px;
+                width: 200px;
+                background-color: rgb(160, 106, 106);
+                animation-name: animatee;
+                animation-duration: 2s;
+                position: relative;
+                align-items: top ;
+                display: flex;
+                animation-iteration-count: infinite;
+           }
+           
+           @keyframes animatee{
+                from
+                {
+                    background-color: aqua;
+                    left:0;
+                    right: 0;
+                    bottom: 0;
+                    top:0;
+            }
+                25%{
+                left:15%;
+                right: 0;
+                bottom: 0;
+                 top:0;
+        }
+        25%{
+            bottom: 50%;
+           
+        }
+        25%{
+            right: 50%;
+           
+        }
+                to{
+                    background-color: rgb(53, 85, 85);
+                    
+                  top: 50%;
+                    
+                    
+                }
+           }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            Yo
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let fname = prompt("Enter first name");
+            let lname = prompt("Enter last name");
+            name = fname+lname;
+            let hr;
+            let d ;
+
+            function clock()
+            {
+                d = new timer();
+                hr=d.getHours();
+            }
+
+            if(1<hr<12)
+            {
+                document.write("Good morning" + name);
+            }
+            else if(12<=hr<17)
+            {
+                document.write("Good noon" + name);
+            }
+            else{
+                document.write("Good evening" + name);
+            }
+        </script>
+    </body>
+</html>
